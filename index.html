@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+<!--H2: Lato, 36px, bold
+H3: Lato, 24px, bold
+H4: Lato, 22px, bold
+H5: Lato, 20px, bold
+H6: Lato, 19px, plain text
+Body: Noto sans, 20px, plain text  -->
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Lato|Noto+Sans&display=swap');
+
+      body { font-family: 'Noto Sans', sans-serif; font-size: 20px; }
+      h1 {  font-family: 'Lato', sans-serif; border-bottom: 1px solid #af3c43; font-size: 38px; font-weight:bold }
+      h2 { font-family: 'Lato', sans-serif; font-size: 36px; font-weight: bold }
+      h3 { font-family: 'Lato', sans-serif; font-size: 24px; font-weight: bold }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: middle
+
+# Continuous Integration & Continuous <sup>Delivery</sup>&frasl;<sub><del>Deployment</del></sub>
+
+???
+
+I don't like to call it Continuous Deployment because that is scary and could remove the control from some people
+We use the term delivery because it's less frightening. 
+
+It's the same thing, we have a deployable product at the end whether you trust the speed and the process enough to put it out to production is not relevant.
+
+If you don't trust why not? What can you do to fix it. 
+
+---
+
+.center[![How to draw an owl. Step 1, Draw some circles. Step 2, Draw the rest of the fucking owl](/rCr9A.png)]
+
+???
+
+How many people have seen this meme. 
+
+When you talk to folks about the abilty to check in a line of code, have it checked and validated using both automated processes and manual code reviews by your co-workers then automatically deployed to a production environment.
+
+It can feel a lot like this.
+
+I can't take credit saw this idea in a presentation from DevOpsDays Toronto
+
+---
+
+# How to do CI/CD 
+
+--
+
+## 1. Check in some code.
+
+--
+
+## 2. Do all of your current manual processes automatically.
+
+---
+
+# It's not that hard.
+
+---
+
+# Step 1. Use git
+
+--
+
+## Just use it  
+
+--
+
+## It'll be a lot harder if you don't  
+
+--
+
+## Everything good is built for it.  
+
+---
+
+# Step 2
+ 
+--
+
+## Pick one of the following: 
+
+- Secret Checking
+- Security scanning
+- Linting
+- Test Automation
+- Static Analysis
+- Dynamic Analysis
+
+--
+
+### Pick the easiest
+
+--
+
+### Congrats you are on your way
+
+---
+
+# Secret Checking 
+
+--
+
+## 18f/git-seekret
+
+--
+
+## yelp/detect-secret
+
+---
+
+# Linting
+
+--
+
+## Pick rules that work for you. 
+
+--
+
+### Just pick a standard that someone else has chosen
+
+--
+
+### It's __really__ not worth doing anything else
+
+--
+
+### If you have arguments flip a coin.
+
+--
+
+### Stop Bikeshedding
+
+???
+
+Discusion over Small details overwhelm those over big details.
+Everyone has an opinion.
+
+---
+
+# Security Scanning
+
+--
+
+## Do everything that you can without slowing down your builds too much
+
+
+--
+
+## Have a second CI Pipeline that does everything .footnote[.red.bold[*] Important footnote]
+ 
+
+--
+
+## Optimize for speed. Have the ability to fix things fast to reduce the impact when things break. Also do smaller pieces of work so that there is less chance of things breaking.
+
+---
+
+# Free security scanning tools
+
+--
+
+## OWASP Zed Attack Proxy
+
+--
+
+## Owasp Glue
+
+---
+
+# Automated Tests
+
+--
+
+## Unit Tests Just do them
+
+--
+
+## e2e Tests
+
+--
+
+## Do most of them in Cypress
+
+--
+
+## If you have the time write smoke tests in selenium
+
+--
+
+## If you have the patience use something like Cucumber
+### * Personally I can't bother setting this up.
+
+---
+
+# What next?
+
+--
+
+## Automate whatever you can think of. 
+
+--
+
+- Bundle Sizes
+- Time to Interaction
+- Image Compression
+- Spell Checking
+- Translations
+- ALL THE THINGS.
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

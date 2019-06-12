@@ -17,6 +17,8 @@ Body: Noto sans, 20px, plain text  -->
       h2 { font-family: 'Lato', sans-serif; font-size: 36px; font-weight: bold }
       h3 { font-family: 'Lato', sans-serif; font-size: 24px; font-weight: bold }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .whoah { color: #d3080c }
+      .okay { color: #26374A }
     </style>
   </head>
   <body>
@@ -28,12 +30,11 @@ class: middle
 
 ## A Pragmatic Approach to Continuous Integration and Continuous Delivery
 
-???
+---
 
---- 
 class: middle
 
-## What is Continuous Integration?
+## What is .okay[Continuous Integration]?
 
 ???
 
@@ -43,7 +44,7 @@ Continuous Integration (CI) is the practice of merging all developers' working c
 
 class: middle
 
-## What is Continuous Delivery?
+## What is .okay[Continuous Delivery]?
 
 ???
 
@@ -54,6 +55,8 @@ It's the same thing as Continous Deployment, in both we have a deployable produc
 Whether you trust the process enough to remove the human element from deploying or not is really irrelevant to the work that needs to be done.
 
 ---
+
+# How to Draw an Owl
 
 .center[![Text: How to draw an owl. The picture contains two images one is of two circles, ](/rCr9A.png)]
 
@@ -80,33 +83,119 @@ I can't take credit saw this idea in a presentation from DevOpsDays Toronto
 
 ## 1. Check in some code.
 
+???
+
+Check some code into source control
+
 --
 
 ## 2. Do all of your current manual processes automatically.
 
----
+??? 
+
+Just do everything you currently do but automate it.
 
 ---
 
-# Step 1. Use git
+class: middle
 
---
+## Step 1: Use .okay[Git].
 
-## Just use it  
+???
 
---
+Everyone else is using it. 
 
-## It'll be a lot harder if you don't  
+All of the good tools are being built to integrate with it. 
 
---
-
-## Everything good is built for it.  
+It's easier to use learn it than it will be to get some things working without it
 
 ---
 
-# Step 2
- 
---
+class: middle
+
+## Step 2: Pick a CI/CD Tool.
+
+---
+
+class: middle, center
+
+## Which .okay[Tool]? 
+
+---
+
+class: middle, center
+
+## Doesn't Matter.
+
+???
+
+Pick the easiest one or the one you are comfortable with. 
+
+Essentially they all do the same thing just run commands on a computer somewhere.
+
+Have Azure use Azure DevOps Pipelines, Have GCP use Google Cloud Build, Have Aws use Code Pipeline or Code Build, have GitLab use GitLab CI/CD
+
+
+---
+
+class: middle
+
+## But what if we can't decide which is best?
+
+
+---
+
+class: middle
+
+## Should we setup a .okay[Working Group]? 
+
+---
+
+class: middle, center
+
+## .whoah[**No**]
+
+???
+
+Flip a coin, or just try one out and if it sucks don't use it switch to another.
+
+A working group is not going to get you the answer 
+
+
+---
+
+class: middle
+
+## Step 3: Automate a .okay[Thing]
+
+???
+
+Start building those feedback loops
+
+---
+
+class: middle, center
+
+## Which .okay[Thing]?
+
+---
+
+class: middle, center
+
+## The .okay[Easiest].
+
+???
+
+Have automated unit tests uses those.
+
+Have automated end to end tests use those. 
+
+Greenfield project? Use linters. 
+
+Have nothing well write one test or pick one linter and use that.
+
+---
+
 
 ## Pick one of the following: 
 

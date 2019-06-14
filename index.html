@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <title>How to draw an owl.</title>
     <meta charset="utf-8">
 <!--H2: Lato, 36px, bold
 H3: Lato, 24px, bold
@@ -50,14 +50,14 @@ class: middle
 
 --
 
-## I'm also a .okay[Digital Fellow] with the Digital Academy, whose expertise is .okay[DevOps].
+## I'm also the .okay[Digital Fellow] for .okay[DevOps] with the Digital Academy.
 
 ---
-class: middle
+class: middle, center
 
 ## What is .okay[Continuous Integration]?
 
-[TODO] Add a diagram showing Trunk Based Development
+![An image outlining a CI flow in git, a new branch is created, a merge request is created, tests fail, new changes are pushed, those tests pass, the code is reviewed, and merged into the master branch.](/CI-diag1.png)
 
 ???
 
@@ -125,6 +125,8 @@ class: middle
 
 ???
 
+This one is a no brainer and there shouldn't really be any discussion needed.
+
 Everyone else is using it. 
 
 All of the good tools are being built to integrate with it. 
@@ -135,7 +137,7 @@ It's easier to use learn it than it will be to get some things working without i
 
 class: middle
 
-## Step 2: Pick a CI/CD Tool.
+## Step 2: Pick a .okay[CI/CD] Tool.
 
 ---
 
@@ -147,7 +149,7 @@ class: middle, center
 
 class: middle, center
 
-## Doesn't Matter.
+## Just .okay[pick] one.
 
 ???
 
@@ -219,23 +221,67 @@ Have nothing well write one test or pick one linter and use that.
 
 ---
 
+class: middle
 
 ## Pick one of the following: 
 
-- Secret Checking
-- Security scanning
-- Linting
-- Test Automation
-- Static Analysis
-- Dynamic Analysis
+--
+
+### Secret Checking
 
 --
 
-### Pick the easiest
+### Security scanning
 
 --
 
-### Congrats you are on your way
+### Linting
+
+--
+
+### Test Automation
+
+--
+
+### Static Analysis
+
+--
+
+### Dynamic Analysis
+
+---
+
+class: middle
+
+## Pick the .okay[easiest] to setup
+
+???
+
+You already have linting rules add a linter
+
+Already have Test automation add that 
+
+---
+
+class: middle
+
+### Also typically they are all easy to setup: 
+
+```
+docker pull owasp/glue
+docker run --rm --name=Glue \
+  -v /code/location:/tmp/directory owasp/glue \
+  -d -f json /tmp/directory/
+
+```
+
+---
+
+class: middle
+
+## .okay[Congrats] you are on your way to DevOps.
+
+## You've got a feedback loop.
 
 ---
 
@@ -250,113 +296,38 @@ class: middle
 
 ---
 
-class: middle
+## .whoah[But Wait!]
 
-# .whoah[THE END AFTER THIS IS AN OLD VERSION]
+--
+
+## What tools should we use?
 
 ---
 
-# Secret Checking 
+## Here's a hint: 
 
 --
 
-## 18f/git-seekret
+## Google `Awesome x`
+
+### * Where x equals the thing you want to do.
 
 --
 
-## yelp/detect-secret
+- Awesome Static Analysis: https://github.com/mre/awesome-static-analysis
+- Awesome Linters: https://github.com/caramelomartins/awesome-linters
+- Awesome Test Automation: https://github.com/atinfo/awesome-test-automation
+- Awesome Security: https://github.com/sbilly/awesome-security
+- Awesome CI: https://github.com/ligurio/awesome-ci
+- Awesome you get the picture...
 
 ---
 
-# Linting
+## OKay now I've automated my things what next: 
 
 --
 
-## Pick rules that work for you. 
-
---
-
-### Just pick a standard that someone else has chosen
-
---
-
-### It's __really__ not worth doing anything else
-
---
-
-### If you have arguments flip a coin.
-
---
-
-### Stop Bikeshedding
-
-???
-
-Discusion over Small details overwhelm those over big details.
-Everyone has an opinion.
-
----
-
-# Security Scanning
-
---
-
-## Do everything that you can without slowing down your builds too much
-
-
---
-
-## Have a second CI Pipeline that does everything .footnote[.red.bold[*] Important footnote]
- 
-
---
-
-## Optimize for speed. Have the ability to fix things fast to reduce the impact when things break. Also do smaller pieces of work so that there is less chance of things breaking.
-
----
-
-# Free security scanning tools
-
---
-
-## OWASP Zed Attack Proxy
-
---
-
-## Owasp Glue
-
----
-
-# Automated Tests
-
---
-
-## Unit Tests Just do them
-
---
-
-## e2e Tests
-
---
-
-## Do most of them in Cypress
-
---
-
-## If you have the time write smoke tests in selenium
-
---
-
-## If you have the patience use something like Cucumber
-### * Personally I can't bother setting this up.
-
----
-
-# What next?
-
---
-
-## Automate whatever you can think of. 
+## Automate .okay[Moar] Things!
 
 --
 
@@ -365,7 +336,6 @@ Everyone has an opinion.
 - Image Compression
 - Spell Checking
 - Translations
-- ALL THE THINGS.
 
 
     </textarea>

@@ -3,7 +3,9 @@
   <head>
     <title>How to draw an owl.</title>
     <meta charset="utf-8">
-<!--H2: Lato, 36px, bold
+<!--
+
+H2: Lato, 36px, bold
 H3: Lato, 24px, bold
 H4: Lato, 22px, bold
 H5: Lato, 20px, bold
@@ -59,14 +61,17 @@ class: middle
 .center[![A drawing of two circles one small on top, one larger at the bottom, the circles slightly overlap, and beside it a detailed image of an owl.](./2steps.png)]
 .left[**Step 1.** Draw two circles] .right[**Step 2.** Draw the rest of the f\*\*\*\*\*\* owl]
 
-
 ???
 
 How many people have seen this meme. 
 
-When you talk to folks about the abilty to check in a line of code, have it checked and validated using both automated processes and manual code reviews by your co-workers then automatically deployed to a production environment.
+When I talk to folks about CI/CD and I always get the same responses. 
 
-It can feel a lot like this. 
+- sure it's easy for you or 
+- but where do you start
+
+
+but I have the feeling it feels a lot like i'm giving them these instructions for drawing an owl.
 
 I'm here to argue for a pragmatic approach using open source tools that we can start using today that will allow us to quickly move to the cloud.
 
@@ -83,6 +88,8 @@ class: middle, center
 ???
 
 Continuous Integration (CI) is the practice of merging all developers' working copies to a shared mainline several times a day.
+
+These changes typically go through a suite of automated quality checks before being manually reviewed by a peer. 
 
 ---
 
@@ -102,21 +109,23 @@ Whether you trust the process enough to remove the human element from deploying 
 
 # How to do CI/CD in two easy steps
 
+???
+
+So in the spirit of drawing an owl I present to you my guide to to CI/CD in two easy steps
+
 --
 
 ## 1. Check in some code.
-
-???
-
-Check some code into source control
-
---
 
 ## 2. Do all of your current manual processes automatically.
 
 ???
 
+Check some code into source control
+
 Just do everything you currently do but automate it.
+
+Okay so it's not two easy steps but it's not really much more then that.
 
 ---
 
@@ -140,6 +149,10 @@ class: middle
 
 ## Step 2: Pick a .okay[CI/CD] Tool.
 
+???
+
+Pick a tool to automate your builds and creation of your deliverables.
+
 ---
 
 class: middle, center
@@ -162,7 +175,6 @@ Have Azure use Azure DevOps Pipelines, Have GCP use Google Cloud Build, Have Aws
 
 Pick the one that sucks least for your current situation.
 
-
 ---
 
 class: middle
@@ -175,6 +187,7 @@ class: middle
 
 ## Should we setup a .okay[Working Group]? 
 
+
 ---
 
 class: middle, center
@@ -186,7 +199,6 @@ class: middle, center
 Flip a coin, or just try one out and if it sucks don't use it switch to another.
 
 A working group is not going to get you the answer 
-
 
 ---
 
@@ -294,6 +306,12 @@ class: middle
 # .okay[One] step at a time.
 
  ![Steps to draw an Owl](./fullowl.png)
+
+???
+
+So I ask that instead of setting up a working group, or writing a strategy on how to do this that you task a group in your department with automating a build. 
+
+Get them using git, give them access to a CI/CD Tool, barely any money, and ask them to automate a single thing as part of their automated build.
 
 ---
 
